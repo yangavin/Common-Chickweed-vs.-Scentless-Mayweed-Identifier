@@ -10,8 +10,6 @@ from keras import backend as K
  
 img_width, img_height = 224, 224
 
-labels = ["Common Chickweed", "Scentless Mayweed"]
-img_size = 244
 
 train_data_dir = 'train'
 test_data_dir = 'test'
@@ -82,4 +80,4 @@ model.fit_generator(
     validation_steps=nb_test_samples // batch_size)
 
 
-model.save_weights('model_saved.h5')
+model.save('model_saved.h5')
